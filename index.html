@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <title>Shreklacious</title>
+    <!-- Link to css -->
+    <link rel="stylesheet" href="carousel.css"> 
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+    
+   <!-- Title with animated text -->
+<header class="animated-text">
+    <div class="hero-content">
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="logo.png" alt="Shreklacious Logo" class="logo">
+        </div>
+        <div class="text-box">
+            <!-- Title -->
+            <h1>Welcome to Shreklacious</h1>
+            <p>Where swamp dreams come true!</p>
+        </div>
+    </div>
+</header>
+
+    <!-- Sidebar Navigation -->
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="closeSidebar()">Close</button>
+        <h2>Explore Shreklacious</h2>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Shrek Menu</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="job.html">Job Application</a>
+    </div>
+<!-- Button to open the sidebar -->
+<button class="open-btn" onclick="openSidebar()">☰ Discover</button>
+
+<!--Automatic card sliding -->
+<section class="card-slider">
+    <h2>Our Swampy Delights</h2>
+    <div class="slider-container">
+        <div class="card-wrapper">
+            <!-- Slide 1 -->
+            <div class="card-slide">
+                <div class="image-item">
+                    <img src="donkey_donuts.png" alt="Donkey Donuts">
+                    <div class="description">
+                        <h3>Donkey Donuts</h3>
+                        <p>Rating: ★★★★★</p>
+                        <p>“THE BEST DONUT!”</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="shrek_pageti.png" alt="Shrek Pageti">
+                    <div class="description">
+                        <h3>Shrek Pageti</h3>
+                        <p>Rating: ★★★★★</p>
+                        <p>“Fresh and DELICIOUS!”</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="shrek_pizza.png" alt="Shrek Liza">
+                    <div class="description">
+                        <h3>Shrek Liza</h3>
+                        <p>Rating: ★★★★★</p>
+                        <p>“FRESH, ROUND, AROMA, YES!”</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="shrek_key.png" alt="Shrekey">
+                    <div class="description">
+                        <h3>Shrekey</h3>
+                        <p>Rating: ★★★★☆</p>
+                        <p>“I WANT MORE!”</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="card-slide">
+                <div class="image-item">
+                    <img src="shrek_cream.png" alt="Shkeam">
+                    <div class="description">
+                        <h3>Shkeam</h3>
+                        <p>Rating: ★★★★☆</p>
+                        <p>“Minty, flavourful! Creamy!”</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="shrek_coffee.png" alt="Cashek">
+                    <div class="description">
+                        <h3>Cashek</h3>
+                        <p>Rating: ★★★★☆☆</p>
+                        <p>“Muddy, cheap though”</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="shrek_sandwich.png" alt="Ogre Sandwich">
+                    <div class="description">
+                        <h3>Ogre Sandwich</h3>
+                        <p>Rating: ★★★★☆</p>
+                        <p>“SWAMP BUNS!”</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="shrek_don.png" alt="Mud Curly">
+                    <div class="description">
+                        <h3>Mud Curly</h3>
+                        <p>Rating: ★★★☆☆</p>
+                        <p>“Mud dough, and mud”</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="majestic.png" alt="majestic">
+                    <div class="description">
+                        <h3>Swampy Green Delight</h3>
+                        <p>Rating: ★★★★★</p>
+                        <p>“IT WAS EVERYTHING!”</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="confidence.png" alt="confidence">
+                    <div class="description">
+                        <h3>Spicy Swamp Chilli</h3>
+                        <p>Rating: ★★★★★</p>
+                        <p>“I AM CONFIDENCE!”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- next or prev slide -->
+    <button class="slider-button" onclick="prevSlide()">&#10094; Previous</button>
+    <button class="slider-button" onclick="nextSlide()">Next &#10095;</button>
+</section>
+
+<!-- reservation or delivery -->
+<section class="reservation-delivery">
+    <h2>Make a Reservation or Order Online</h2>
+
+    <div class="selection-container">
+        <div class="selection-trigger">
+            <!-- image cliackable -->
+            <img src="buttonshrek.png" alt="Make a Selection" class="clickable-image" onclick="showOptions()">
+        </div>
+        <!-- BUTTON FOR RESERVATION OR DELIVERY POPUP  -->
+        <div id="selection-options" class="selection-options hidden">
+            <button class="option-button" onclick="openPopup('reservation')">Make a Reservation</button>
+            <button class="option-button" onclick="openPopup('delivery')">Order for Delivery</button>
+        </div>
+
+        <!-- Popup Container -->
+        <div id="popup" class="popup hidden">
+            <div class="popup-content">
+                <!-- Close the popup -->
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h3 id="popup-title"></h3>
+
+                <!-- Reservation Form -->
+                <form id="reservation-form" class="popup-form hidden">
+                    <h3>MAKE A RESERVATION LAD?</h3>
+                    <!-- Name -->
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <!-- Number of people -->
+                    <label for="people">Number of People:</label>
+                    <input type="number" id="people" name="people" min="1" required>
+                    <br>
+                    <!-- Date -->
+                    <label for="reservation-date">Reservation Date:</label>
+                    <input type="date" id="reservation-date" name="reservation-date" required>
+                    <br>
+                    <!-- Time -->
+                    <label for="reservation-time">Reservation Time:</label>
+                    <input type="time" id="reservation-time" name="reservation-time" required>
+                    <br>
+                    <!-- Menu -->
+                    <h4>Select Menu:</h4>
+                    <select name="menu-selection" required>
+                        <option value="">Select an item</option>
+                        <option value="mud_curly">Mud Curly</option>
+                        <option value="shkeam">Shkeam</option>
+                        <option value="shrekey">Shrekey</option>
+                        <option value="donkey_donuts">Donkey Donuts</option>
+                        <option value="cashek">Cashek</option>
+                        <option value="ogre_sandwich">Ogre Sandwich</option>
+                        <option value="swamp_liza">Swamp Liza</option>
+                        <option value="swamp_pageti">Swamp Pageti</option>
+                    </select>
+                    <br>
+                    <!-- Confirmation button -->
+                    <button type="submit">Confirm Reservation</button>
+                </form>
+
+                <!-- Delivery Form -->
+                <form id="delivery-form" class="popup-form hidden">
+                    <h3>Delivery? Ok.</h3>
+                    <!-- Name -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <!-- Address input -->
+                    <label for="delivery-address">Delivery Address:</label>
+                    <input type="text" id="delivery-address" name="delivery-address" required>
+                    <br>
+                    <!-- Menu selection -->
+                    <h4>Select Menu:</h4>
+                    <select name="menu-selection" required>
+                        <option value="">Select an item</option>
+                        <option value="mud_curly">Mud Curly</option>
+                        <option value="shkeam">Shkeam</option>
+                        <option value="shrekey">Shrekey</option>
+                        <option value="donkey_donuts">Donkey Donuts</option>
+                        <option value="cashek">Cashek</option>
+                        <option value="ogre_sandwich">Ogre Sandwich</option>
+                        <option value="swamp_liza">Swamp Liza</option>
+                        <option value="swamp_pageti">Swamp Pageti</option>
+                    </select>
+                    <br>
+                    <br>
+                    <!-- Payment method -->
+                    <label for="payment-method">Payment Method:</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="">Choose a payment method</option>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="Cash">Cash</option>
+                    </select>
+                    <br>
+                    <!-- If have membership option -->
+                    <label for="shrek-membership">Shrek Membership:</label>
+                    <select id="shrek-membership" name="shrek-membership" required>
+                        <option value="">Choose a membership status</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                    <br>
+                    <!-- Confirmation button -->
+                    <button type="submit">Confirm Delivery</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+   
+<!-- Infinite looping footer text -->
+<footer class="footer">
+    <div class="marquee">
+        <div class="marquee-content">
+            <span>Welcome to Shreklacious, where the restaurant of your dreams finally comes to serve you Shrek-Shrek-Shrekiness food.</span>
+            <span>Donkey has vandalized the restaurant in at Shreklacious Branch 121-23#21.</span>
+            <span>Congratulations to the Shrek nation!</span>
+            <span>"This is what in sam the chopper going to- help me- I love you lal" - Shrek.</span>
+        </div>
+    </div>
+    <!-- Social media -->
+    <div class="social-media">
+        <a href="https://facebook.com" target="_blank">
+            <img src="facebook.png" alt="Facebook" />
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <img src="twitter.png" alt="Twitter" />
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <img src="instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://youtube.com" target="_blank">
+            <img src="youtube.png" alt="YoutubeLink" />
+        </a>
+        <!-- Add more social media icons as needed -->
+    </div>
+</footer>
+
+
+<!-- Javascript link -->
+    <script src="script.js"></script>
+    <script src="sidebar.js"></script>
+</body>
+</html>
